@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Тестовое задание</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/posts.css">
+
+</head>
+<body>
+
+    <div class="container">
+
+        <header id="header">
+            <div class="page-header">
+                <h1>Тестовое задание</h1>
+            </div>
+            <h2>Задача:</h2>
+            <ol>
+                <li>Используя коллекцию <code>json/posts.json</code> заполнить базовыми значениями <code>localStorage</code> пользователя, вывести записи в <code>#posts</code>, взяв за основу разметку <code>#posts article</code>.</li>
+                <li>Возможность удаления записи из <code>localStorage</code>.</li>
+                <li>Форма добавления записи, валидация данных.</li>
+            </ol>
+            <p class="alert alert-info">Ограничений по использованию библиотек, кроссбраузерности &mdash; нет.</p>
+        </header>
+
+        <section>
+
+            <div id="posts" class="well">
+
+                <article>
+                    <header>
+                        <h3>%заголовок%</h3>
+                    </header>
+                    <section>
+                        <p>%текст%</p>
+                    </section>
+                    <footer>
+                        <div class="tags">
+                            <button class="btn btn-xs btn-default">%тег%</button> <button class="btn btn-xs btn-default">%еще тег%</button>
+                        </div>
+                    </footer>
+                    <div class="controls">
+                        <button class="btn btn-danger btn-mini">удалить</button>
+                    </div>
+                </article>
+
+            </div> <!-- /#posts -->
+            
+            <form id="post-add" class="col-lg-4">
+                <div class="form-group" style="width:1000px;" >
+                    <span class="wrap-fields">
+                        <input type="text" class="form-control" name="title" placeholder="заголовок" style="width:250px;display: inline-block;">
+                        <span id="title_error" class="alert-danger"></span>
+                    </span>
+                </div>
+                <div class="form-group" style="width:1000px;" >
+                    <span class="wrap-fields">
+                        <input type="text" class="form-control" name="body" placeholder="запись" style="width:250px;display: inline-block;">
+                        <span id="body_error" class="alert-danger"></span>
+                    </span>
+                </div>
+                <div class="form-group" style="width:1000px;" >
+                    <span class="wrap-fields">
+                        <input type="text" class="form-control" name="tags" placeholder="тег, еще тег" style="width:250px;display: inline-block;">
+                        <span id="tags_error" class="alert-danger"></span>
+                    </span>
+                </div>
+                <button type="submit" class="btn btn-primary">Добавить</button>
+            </form> <!-- /#post-add -->
+
+        </section>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -140,9 +140,9 @@ function hideFormErrors(arr)
 function processForm(e) {
     if (e.preventDefault) e.preventDefault();
     var fields = ['title', 'body', 'tags'];
+    hideFormErrors(fields);
     var isValid = true;
     var elements = e.target.elements;
-
     var newEl = {};
     for(field in fields)
     {
@@ -160,7 +160,6 @@ function processForm(e) {
     }
     if (isValid)
     {
-        hideFormErrors(fields);
         addElem(newEl);
     }
     return false;

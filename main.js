@@ -51,8 +51,6 @@ function addElem(record){
             lastID = tempArr[el].id;
         lastIndex = el;
     }
-    if (lastIndex <= 0)
-	throw new Error("nothing to add");
     record.id = ++lastID;
     tempArr[++lastIndex] = record;
     console.log(tempArr);

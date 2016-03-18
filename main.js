@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Created by Takito on 25.02.2016.
  */
 var PATH_TO_JSON = 'json/posts.json';
@@ -44,13 +44,15 @@ function removeElem(id)
 }
 function addElem(record){
     var tempArr = JSON.parse(localStorage["myData"]);
-    var lastID = 1;
+    var lastID = 1; lastIndex = 0;
     for(el in tempArr)
     {
         if (lastID < tempArr[el].id)
             lastID = tempArr[el].id;
         lastIndex = el;
     }
+    if (lastIndex <= 0)
+	throw new Error("nothing to add");
     record.id = ++lastID;
     tempArr[++lastIndex] = record;
     console.log(tempArr);

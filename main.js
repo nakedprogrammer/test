@@ -44,7 +44,7 @@ function removeElem(id)
 }
 function addElem(record){
     var tempArr = JSON.parse(localStorage["myData"]);
-    var lastID = 1; lastIndex = 0;
+    var lastID = 1; lastIndex = 1;
     for(el in tempArr)
     {
         if (lastID < tempArr[el].id)
